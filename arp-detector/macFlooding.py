@@ -1,4 +1,3 @@
-from functools import cache
 from scapy.all import Ether, IP, TCP, RandIP, RandMAC, sendp
 
 def generate_packets():
